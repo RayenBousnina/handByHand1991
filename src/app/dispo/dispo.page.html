@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Available Tasks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item *ngFor="let dis of infos">
+    <ion-card>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="assets/Mr.png">
+        </ion-avatar>
+        <ion-label>
+          <h3>{{dis.name}}</h3>
+          <h4>{{dis.date}}</h4>
+        </ion-label>
+      </ion-item>
+      <ion-img [src]="image"></ion-img>
+      <ion-card-header>
+        <ion-card-title>{{dis.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>{{dis.description}}</ion-card-content>
+    </ion-card>
+  </ion-item>
+  <ion-button (click)="toLogin()">
+    <ion-icon slot="start" name="add"></ion-icon>New service
+  </ion-button>
+</ion-content>
